@@ -1,0 +1,163 @@
+<html lang="en" dir="ltr">
+<head>
+  <title> FoodWithFriends</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="rest.css">
+</head>
+<body>
+  <!-- navbar start -->
+  <div class="navbar" >
+    <a href="index.html"  style="margin-left:300px;margin-top:25px" >About Us</a>
+    <a href="RestaurantsNew.html" class="active" style="margin-left:50px;margin-top:25px">Restaurants</a>
+    <a href="cocktails.html"style="margin-left:50px;margin-top:25px">Cocktails</a>
+    <a href="foodblog.html" style="margin-left:50px;margin-top:25px">Dishes</a>
+    <a href="contact.html" style="margin-left:50px;margin-top:25px">Contact & Reservations</a>
+  </div>
+      <!-- navbar ends -->
+
+      <div class="w3-content w3-section" style="max-width:100%">
+        <img class="mySlides" src="restaurant.jpg" style="width:100%; height:90%" >
+      </div>
+      <br>
+      <div class="restaurant">
+        <center><b> Restaurants <BR>#TrendingThisWeek  </b></CENTER>
+      </div>
+
+      <p id='resDetails'></p>
+      <script>
+
+      var url="https://developers.zomato.com/api/v2.1/search?lat=30.7300&lon=76.8101&sort=rating&apikey=0467dbac80489eb7e9f85f9f8bb3a0bf"
+      var body = document.getElementsByTagName("body")[0];
+
+      xhr= new XMLHttpRequest();
+      var data;
+      xhr.onreadystatechange = function()
+      {
+
+         if (this.readyState == 4 && this.status == 200)
+         {
+           data=JSON.parse(this.responseText);
+
+          var divMain= document.getElementById("resDetails");
+          var child = divMain.lastElementChild;
+           while (child)
+           {
+               divMain.removeChild(child);
+               child = divMain.lastElementChild;
+           }
+          // var divRes= document.createElement("div");
+
+           var nameTab = document.createElement("table");
+           nameTab.setAttribute("id","table");
+    //       divRes.appendChild(nameTab);
+
+           var nameRow = document.createElement("TR");
+  //         divRes.appendChild(nameRow);
+           var nameCol = document.createElement("Td");
+        //   divRes.appendChild(nameCol);
+        var ourTableBody = document.createElement("tbody");
+        var colCount = 0;
+          for(i=0;i<data.restaurants.length;i++)
+          {
+            colCount =colCount + 1;
+            var res_name=data.restaurants[i].restaurant.name;
+            var res_img=data.restaurants[i].restaurant.featured_image;
+            var res_cuisines=data.restaurants[i].restaurant.cuisines;
+            var res_add=data.restaurants[i].restaurant.location.address+", "+data.restaurants[i].restaurant.location.city;
+            var res_url=data.restaurants[i].restaurant.url;
+            var res_phone=data.restaurants[i].restaurant.phone_numbers;
+
+          //old one  var res_name=data.drinks[i].strDrink;
+          // old one  var res_img=data.drinks[i].strDrinkThumb;
+            //divRes.setAttribute("id",i+1);
+            var nameRes = document.createElement("h2");
+            nameRes.setAttribute("id","rest_name");
+            nameRes.innerHTML=res_name;
+
+            var imgRes = document.createElement("img");
+            imgRes.setAttribute("id","image");
+            imgRes.setAttribute("src",res_img);
+            imgRes.setAttribute("height","250px");
+            imgRes.setAttribute("width","300px");
+
+            var nameCusisines = document.createElement("h3");
+            nameCusisines.setAttribute("id","cuisines");
+            nameCusisines.innerHTML=res_cuisines;
+
+            var nameAdd = document.createElement("h3");
+            nameAdd.setAttribute("id","address");
+            nameAdd.innerHTML=res_add;
+
+            var nameUrl = document.createElement("a");
+            nameUrl.setAttribute("href",res_url);
+            nameUrl.setAttribute("id","link");
+           nameUrl.innerHTML="Restaurant Link ";
+
+            var namePhone= document.createElement("h3");
+            namePhone.setAttribute("id","phone");
+          namePhone.innerHTML=res_phone;
+
+
+
+
+
+         if (colCount > 3)
+            {
+              colCount =1;
+              ourTableBody.appendChild(nameRow);
+              nameRow=document.createElement("tr");
+
+            }
+            nameCol = document.createElement("td");
+            nameCol.appendChild(nameRes);
+
+            //var lineBreak0 = document.createElement("br");
+            //nameCol.appendChild(lineBreak0);
+            nameCol.appendChild(imgRes);
+
+          //  var lineBreak1 = document.createElement("br");
+          //  nameCol.appendChild(lineBreak1);
+            nameCol.appendChild(nameCusisines);
+
+            //var lineBreak2 = document.createElement("br");
+            //nameCol.appendChild(lineBreak2);
+            nameCol.appendChild(nameAdd);
+
+            //var lineBreak3 = document.createElement("br");
+            //nameCol.appendChild(lineBreak3);
+            nameCol.appendChild(nameUrl);
+
+            //var lineBreak4 = document.createElement("br");
+            //nameCol.appendChild(lineBreak4);
+            nameCol.appendChild(namePhone);
+
+            nameRow.appendChild(nameCol);
+
+          }
+          ourTableBody.appendChild(nameRow);
+          nameTab.appendChild(ourTableBody);
+          body.appendChild(nameTab);
+
+          nameTab.setAttribute("border","0");
+
+         }
+      };
+      xhr.open("GET",url);
+
+      xhr.send();
+  </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

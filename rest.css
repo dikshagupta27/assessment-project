@@ -1,0 +1,119 @@
+body
+{
+  background-color: white;
+  margin:0px;
+  padding:1px;
+
+}
+ /* -------------navbar -------------*/
+ .navbar
+ {
+   overflow: hidden;
+   background-color: white;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   opacity:0.9;
+   height:60px;
+
+ }
+
+  input[type=date] ,textarea,input[type=text],select {
+   width: 50%;
+   padding: 12px;
+   /* border: 1px solid #ccc; */
+   /* border-radius: 4px; */
+   resize: vertical;
+   background-color:#F0EDE6 ;
+   /* #F0EDE6 */
+ }
+
+
+ .navbar a
+ {
+   float: left;
+   display: block;
+   color: #5F0038;
+   text-align: #B22222;
+   padding: 0px 16px;
+   text-decoration: none;
+   font-size: 17px;
+
+ }
+
+ .navbar a:hover
+ {
+   text-decoration:underline;
+   color:black;
+   height:100px;
+ }
+
+.restaurant
+{
+  font-style: oblique;
+  color: #5F0038;
+  font-family: 'PeachesandCream';
+  font-size: 40;
+}
+
+#table
+{
+  text-align:center;
+  border: 0px;
+}
+
+#rest_name
+{
+  text-align: center;
+  color: #5F0038;
+    font-family: 'PeachesandCream';
+  transition: transform .2s;
+  font-size: 40px;
+}
+#rest_name:hover
+{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+}
+
+#cuisines
+{
+  text-align: center;
+  font-style: oblique;
+  color: #5F0038;
+}
+
+#image
+{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+#image:hover
+{
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#link
+{
+  color:#5F0038;
+}
+#address
+{
+  text-align: center;
+  font-style: oblique;
+  color: #5F0038;
+}
+
+#phone
+{
+  text-align:center;
+  font-style: oblique;
+  color: #5F0038;
+}

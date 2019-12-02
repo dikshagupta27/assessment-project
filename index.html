@@ -1,0 +1,102 @@
+<html lang="en" dir="ltr">
+<head>
+  <title> FoodWithFriends</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- navbar start -->
+
+  <div class="navbar" >
+    <a href="index.html" class="active" style="margin-left:300px;margin-top:25px" >About Us</a>
+    <a href="RestaurantsNew.html" target="_self"style="margin-left:50px;margin-top:25px">Restaurants</a>
+    <a href="cocktails.html"style="margin-left:50px;margin-top:25px">Cocktails</a>
+    <a href="foodblog.html" style="margin-left:50px;margin-top:25px">Dishes</a>
+    <a href="contact.html" style="margin-left:50px;margin-top:25px">Contact & Reservations</a>
+  </div>
+
+  <!-- navbar ends -->
+
+  <!-- css slideshow -->
+    <div class="w3-content w3-section" style="max-width:100%">
+      <img class="mySlides" src="food1.jpg" style="width:100%; height:90%" >
+      <img class="mySlides" src="food2.jpg" style="width:100%; height:90%">
+      <img class="mySlides" src="food3.jpg" style="width:100%; height:90%">
+      <img class="mySlides" src="food4.jpg" style="width:100%; height:90%">
+      <img class="mySlides" src="food5.jpg" style="width:100%; height:90%">
+      <img class="mySlides" src="food6.jpg" style="width:100%; height:90%">
+      <div  class="centered1">
+      <br><br><b> <center> Welcome <br> To Our Blog!</center> </b>
+      </div>
+
+    </div>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel()
+    {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++)
+      {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+
+  <!-- css slideshow ends-->
+  <!-- about us -->
+
+  <div id="contact">
+    <center><b>
+       About Us</b> </center>
+  </div>
+  <br>
+  <div>
+    <center>
+    <table border="0px" >
+      <tr>
+        <td height="50%" width="50%">
+          <img src="foodd8.jpg" alt="foodd8"  height="60%" width="100%"/>
+        </td>
+        <td height="50%" width="50%">
+          <font id="display"><b>Our Story</b></font> <br>
+          <br>
+          <p id=display1>We love to eat, travel, cook, and eat <br>some more! We create & photograph vegetarian recipes.</p>
+             </td>
+    </tr>
+    <tr>
+      <td height="50%" width="50%">
+        <font id="display"><b>Since <br> 2019</b> </font>
+        <br><br><br>
+        <center><font id="display1">
+          Trying to spread happiness.<br><br>
+
+        </font>
+        </center>
+      </td>
+    <td height="50%" width="50%">
+          <img src="chef.jpg" alt="foodd8"  height="70%" width="100%"/>
+        </td>
+
+      </td>
+    </tr>
+
+    </table>
+  </div>
+
+<!-- table complete -->
+
+</body>
+</html>

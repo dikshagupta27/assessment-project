@@ -1,0 +1,174 @@
+<html lang="en" dir="ltr">
+<head>
+  <title> FoodWithFriends</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+  <!-- navbar start -->
+  <div class="navbar" >
+    <a href="index.html" style="margin-left:300px;margin-top:25px" >About Us</a>
+    <a href="RestaurantsNew.html"style="margin-left:50px;margin-top:25px">Restaurants</a>
+    <a href="cocktails.html"style="margin-left:50px;margin-top:25px">Cocktails</a>
+    <a href="foodblog.html" style="margin-left:50px;margin-top:25px">Dishes</a>
+    <a href="contact.html" class="active" style="margin-left:50px;margin-top:25px">Contact & Reservations</a>
+  </div>
+  <!-- navbar ends -->
+
+  <div class="w3-content w3-section" style="max-width:100%">
+    <img class="mySlides" src="food7.jpg" style="width:100%; height:90%" >
+  </div>
+
+  <div id="contact">
+    <center><b>
+       Contact & Reservations</b> </center>
+  </div>
+  <br>
+  <div>
+    <center>
+    <table border="0px" >
+      <tr>
+        <td height="50%" width="50%">
+          <img src="food8.jpg" alt="food8"  height="60%" width="100%"/>
+        </td>
+        <td height="50%" width="50%">
+            <font id="display"><b>Book A Table</b></font> <br>
+            <br>
+            <form >
+
+  <input  placeholder="Date"  type="text" onfocus="(this.type='date')" onblur="(this.type='text')" ><br><br>
+  <select>
+    <option disabled="" selected="selected" >Time</option>
+    <option value="10:00 AM" text align="center">10:00 AM</option>
+     <option value="10:30 AM">10:30 AM</option>
+      <option value="11:00 AM">11:00 AM</option>
+        <option value="11:30 AM">11:30 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+            <option value="12:30 PM">12:30 PM</option>
+              <option value="1:00 PM">01:00 PM</option>
+              <option value="1:30 PM">01:30 PM</option>
+              <option value="2:00 PM">02:00 PM</option>
+              <option value="2:30 PM">02:30 PM</option>
+              <option value="3:00 PM">03:00 PM</option>
+               </select><br><br>
+               <select >
+                 <option disabled="" selected="selected" >Number of Guests</option>
+                 <option value="1">1 Person</option>
+                 <option value="2">2 Persons</option>
+                 <option value="3">3 Persons</option>
+                 <option value="4">4 Persons</option>
+                 <option value="5">5 Persons</option>
+                 <option value="6">6 Persons</option>
+                 <option value="7">7 Persons</option>
+                 </select><br><br>
+
+<button onclick="myFunction1()" class="btn_feedback" name="Book Now" value="Book Now">Book Now</button>
+<script>
+function myFunction1() {
+  alert("Your Table has been booked successfully!");
+}
+</script>
+            </form>
+       </td>
+      </tr>
+      <tr>
+        <td height="50%" width="50%">
+          <font id="display"><b>Our <br>Location</b> </font>
+          <br><br><br>
+          <center><font id="display1">
+            SCO:124-125<br><br>
+            Sector-34,Chandigarh<br><br>
+            Monday-Friday: 10:00A.M- 8:00 P.M <br>
+            Saturday: 10:00A.M- 1:00 P.M <br>
+            Sunday: Closed<br></font>
+          </center>
+        </td>
+        <td height="50%" width="50%">
+          <div id="map">
+          </div>
+        </td>
+      </tr>
+     <tr>
+        <td height="50%" width="50%">
+          <img src="food10.jpg" alt="food10"  height="70%" width="100%"/>
+        </td>
+        <td height="50%" width="50%">
+          <font id="display"><b>Contact <br>Us</b> </font>
+          <br>
+          <p id="display1"><center>Tel: 0172-2674632<br>
+          Email: food@mysite.com<br></center></p>
+          <form >
+              <input id="inpt_text1" type="text" name="firstname" placeholder="Enter your name" required />
+              <br><br>
+              <input id="inpt_text1" type="text" name="lastname" placeholder="Enter your email id" required />
+              <br><br>
+              <textarea  id="textboxid2" name="message" rows="3" cols="30" placeholder="Message...!!"  ></textarea><br><br>
+              <button onclick="myFunction()" class="btn_feedback" name="submit" value="Submit">Send</button>
+              <script>
+              function myFunction() {
+                alert("Thank You For Contacting Us!");
+              }
+              </script>
+
+          </form>
+
+
+
+       </td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    // Initialize and add the map
+    function initMap()
+    {
+      // The location of Uluru
+      var uluru = {lat: 30.7201, lng: 76.7656};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 14, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rv3JMOTG5VNJg1SS0eLOMvfWQLoMMKg&callback=initMap">
+    </script>
+<!-- table complete -->
+
+<div class="footer-main-div">
+  <div class="footer-social-icons">
+    <ul>
+      <li><a href="https://github.com/dikshagupta27" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://github.com/Lipakshi-Arora" target="_blank"><i class="fa fa-github"></i></a></li>
+
+
+    </ul>
+  </div>
+  <div class="footer-menu-one">
+    <ul>
+      <li><a href="index.html">ABOUT US</a></li>
+      <li><a href="RestaurantsNew.html">RESTAURANTS</a></li>
+      <li><a href="cocktails.html">COCKTAILS</a></li>
+      <li><a href="foodblog.html">DISHES</a></li>
+    </ul>
+  </div>
+
+</div>
+<div class="footer-bottom">
+  <p>Made By: <a href="https://dikshagupta27.github.io/" target="_blank"><b>Diksha Gupta
+  </b></a>&nbsp &nbsp <a href="https://Lipakshi-Arora.github.io/" target="_blank"><b>Lipakshi
+    </b></a></p>
+</div>
+
+</html>
+
+
+
+</body>
+</html>

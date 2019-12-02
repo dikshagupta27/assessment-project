@@ -1,0 +1,117 @@
+body
+{
+  background-color: white;
+  margin:0px;
+  padding:0px;
+
+}
+ /* -------------navbar -------------*/
+ .navbar
+ {
+   overflow: hidden;
+   background-color: white;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   opacity:0.9;
+   height:60px;
+
+ }
+
+  input[type=date] ,textarea,input[type=text],select
+  {
+   width: 50%;
+   padding: 12px;
+   /* border: 1px solid #ccc; */
+   /* border-radius: 4px; */
+   resize: vertical;
+   background-color:#F0EDE6 ;
+   /* #F0EDE6 */
+ }
+
+
+ .navbar a
+ {
+   float: left;
+   display: block;
+   color: #5F0038;
+   text-align: #B22222;
+   padding: 0px 16px;
+   text-decoration: none;
+   font-size: 17px;
+
+ }
+
+ .navbar a:hover
+ {
+   text-decoration:underline;
+   color:black;
+   height:100px;
+ }
+
+.blog
+{
+  font-style: oblique;
+  color: #5F0038;
+  font-family: 'PeachesandCream';
+  font-size: 40;
+}
+
+#table
+{
+  text-align:center;
+  margin-left: 10px;
+  margin-right:10px;
+  background-color: #F0EDE6;
+
+  border-collapse: separate;
+  border: 2px solid #5F0038;
+
+}
+
+#name
+{
+  color: #5F0038;
+  font-family: 'PeachesandCream';
+  font-size: 35px;
+}
+
+#image
+{
+  border: 2px solid #5F0038;
+  border-radius: 20px;
+}
+#image:hover
+{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#description
+{
+  color:#5F0038;
+  text-align:justify;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+
+
+#col
+{
+  spacing:15px;
+}
